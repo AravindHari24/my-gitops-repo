@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-app  # Name of the application in ArgoCD
+  namespace: argocd   # ArgoCD namespace
+spec:
+  project: default
+  source:
+    repoURL: "https://github.com/AravindHari24/my-gitops-repo.git"  # Your GitHub repo
+    targetRevision: main   # Branch name
+    path: "manifests"  # Path where deployment/service files are stored in Git
+  destination:
+    server: https://kubernetes.default.svc  # Points to the cluster
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true  # Deletes old resources if removed from Git
+      selfHeal: true  # Restores cluster state if manually changed
+    syncOptions:
+      - CreateNamespace=true  # Creates the namespace if it doesn't exist
