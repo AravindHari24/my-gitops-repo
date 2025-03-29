@@ -9,4 +9,4 @@ spec:
     - protocol: TCP
       port: 80  # Service port
       targetPort: 80  # Target pod's port
-  type: NodePort  # Exposes service on a node-wide port
+  type: NodePort  # Exposes service on a node-wide port 
