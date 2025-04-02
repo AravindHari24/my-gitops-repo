@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: "https://github.com/AravindHari24/my-gitops-repo.git"  # Your GitHub repo
+    repoURL: "https://github.com/AravindHari24/my-gitops-repo.git"  # Your GitHub repo 
     targetRevision: main   # Branch name
     path: "K8s"  # Path where deployment/service files are stored  
   destination:
