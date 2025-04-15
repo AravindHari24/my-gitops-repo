@@ -8,7 +8,7 @@ spec:
   replicas: 2 # Run 2 instanc es of Nginx      
   selector:
     matchLabels:
-      app: nginx  # Select pods with label "nginx"    
+      app: nginx  # Select pods with labe l "ninx"    
   template:
     metadata:
       labels:
