@@ -5,10 +5,10 @@ metadata:
   labels:
     app: nginx
 spec:
-  replicas: 2  # Run 2 instances of Nginx      
+  replicas: 3  # Run 2 instances of Nginx      
   selector:
     matchLabels:
-      app: nginx  # Select pods with label "nginx" 
+      app: nginx  # Select pods with label "nginx"    
   template:
     metadata:
       labels:
